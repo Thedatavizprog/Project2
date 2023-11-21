@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart showing CO AQI Values across Cities in Australia and Malaysia, sorted from highest to lowest value.",
+  "data": {
+      "values": [
+          {"City": "Miri", "CO AQI Value": 67, "CO AQI Category": "Moderate"},
+          {"City": "Palmerston", "CO AQI Value": 9, "CO AQI Category": "Good"},
+          {"City": "Beaufort", "CO AQI Value": 6, "CO AQI Category": "Good"},
+          {"City": "Taiping", "CO AQI Value": 3, "CO AQI Category": "Good"},
+          {"City": "Sibu", "CO AQI Value": 3, "CO AQI Category": "Good"},
+          {"City": "Bukit Mertajam", "CO AQI Value": 3, "CO AQI Category": "Good"},
+          {"City": "Seremban", "CO AQI Value": 3, "CO AQI Category": "Good"},
+          {"City": "Sungai Petani", "CO AQI Value": 3, "CO AQI Category": "Good"},
+          {"City": "Juru", "CO AQI Value": 3, "CO AQI Category": "Good"},
+          {"City": "Teluk Intan", "CO AQI Value": 2, "CO AQI Category": "Good"},
+          {"City": "Shah Alam", "CO AQI Value": 2, "CO AQI Category": "Good"},
+          {"City": "Batu Gajah", "CO AQI Value": 2, "CO AQI Category": "Good"},
+          {"City": "Petaling Jaya", "CO AQI Value": 2, "CO AQI Category": "Good"},
+          {"City": "Parit Buntar", "CO AQI Value": 2, "CO AQI Category": "Good"},
+          {"City": "Kuala Lipis", "CO AQI Value": 2, "CO AQI Category": "Good"}
+      ]
+  },
+  "mark": "bar",
+  "encoding": {
+      "x": {
+          "field": "City", 
+          "type": "nominal", 
+          "sort": "-y",
+          "axis": {"labelAngle": -45}, 
+          "title": "City"
+      },
+      "y": {
+          "field": "CO AQI Value", 
+          "type": "quantitative", 
+          "title": "CO AQI Value"
+      },
+      "color": {
+          "field": "CO AQI Category", 
+          "type": "nominal", 
+          "scale": {"domain": ["Good", "Moderate"],
+                    "range": ["green", "yellow"]},
+          "legend": {"title": "CO AQI Category"}
+      },
+      "tooltip": [
+          {"field": "City", "type": "nominal"},
+          {"field": "CO AQI Value", "type": "quantitative"},
+          {"field": "CO AQI Category", "type": "nominal"}
+      ]
+  },
+  "title": "Top 15 Cities by CO AQI Values in Australia and Malaysia",
+  "height": 300,
+  "width": 700
+}

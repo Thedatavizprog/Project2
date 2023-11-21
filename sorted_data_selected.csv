@@ -1,0 +1,16 @@
+Country,City,AQI Value,AQI Category,CO AQI Value,CO AQI Category,Ozone AQI Value,Ozone AQI Category,NO2 AQI Value,NO2 AQI Category,PM2.5 AQI Value,PM2.5 AQI Category,lat,lng
+Malaysia,Miri,209,Very Unhealthy,67,Moderate,209,Very Unhealthy,2,Good,157,Unhealthy,4.3925,113.9861
+Australia,Palmerston,264,Very Unhealthy,9,Good,2,Good,17,Good,264,Very Unhealthy,53.35,-6.379
+Malaysia,Beaufort,63,Moderate,6,Good,36,Good,0,Good,63,Moderate,32.4597,-80.7235
+Malaysia,Taiping,131,Unhealthy for Sensitive Groups,3,Good,24,Good,10,Good,131,Unhealthy for Sensitive Groups,4.85,100.7333
+Malaysia,Sibu,61,Moderate,3,Good,21,Good,0,Good,61,Moderate,2.3,111.8167
+Malaysia,Bukit Mertajam,150,Unhealthy,3,Good,24,Good,10,Good,150,Unhealthy,5.3631,100.4667
+Malaysia,Seremban,140,Unhealthy for Sensitive Groups,3,Good,14,Good,12,Good,140,Unhealthy for Sensitive Groups,2.7222,101.9417
+Malaysia,Sungai Petani,150,Unhealthy,3,Good,23,Good,10,Good,150,Unhealthy,5.65,100.48
+Malaysia,Juru,150,Unhealthy,3,Good,27,Good,9,Good,150,Unhealthy,-7.5369,-37.8189
+Malaysia,Teluk Intan,90,Moderate,2,Good,57,Moderate,1,Good,90,Moderate,4.0259,101.0213
+Malaysia,Shah Alam,78,Moderate,2,Good,43,Good,2,Good,78,Moderate,3.0722,101.5167
+Malaysia,Batu Gajah,92,Moderate,2,Good,57,Moderate,1,Good,92,Moderate,4.4667,101.05
+Malaysia,Petaling Jaya,97,Moderate,2,Good,48,Good,1,Good,97,Moderate,3.0972,101.6444
+Malaysia,Parit Buntar,79,Moderate,2,Good,60,Moderate,0,Good,79,Moderate,5.1167,100.5
+Malaysia,Kuala Lipis,70,Moderate,2,Good,10,Good,3,Good,70,Moderate,4.18,102.05

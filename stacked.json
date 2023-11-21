@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A stacked bar chart of AQI categories per city, showing only cities with more than one record.",
+  "data": {"url": "data_selected.csv"},
+  "transform": [
+    {
+      "joinaggregate": [{"op": "count", "as": "TotalCount"}],
+      "groupby": ["City", "AQI Category"]
+    },
+    {
+      "filter": "datum.TotalCount > 1"
+    },
+    {
+      "window": [{"op": "rank", "as": "CityRank"}],
+      "sort": [{"field": "TotalCount", "order": "descending"}],
+      "groupby": ["City"]
+    },
+    {
+      "filter": "datum.CityRank <= 15"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "City",
+      "type": "nominal",
+      "sort": {"field": "TotalCount", "order": "descending"},
+      "axis": {"title": "City", "labelAngle": -45}
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "TotalCount",
+      "type": "quantitative",
+      "axis": {"title": "Number of Records"}
+    },
+    "color": {
+      "field": "AQI Category",
+      "type": "nominal",
+      "scale": {"scheme": "category20b"},
+      "legend": {"title": "AQI Categories"}
+    },
+    "tooltip": [
+      {"field": "City", "type": "nominal"},
+      {"field": "AQI Category", "type": "nominal"},
+      {"field": "TotalCount", "type": "quantitative", "title": "Number of Records"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"domainWidth": 1}
+  },
+  "width": 1000,
+  "height": 400, 
+  "autosize": {"type": "fit", "contains": "padding"}
+}
